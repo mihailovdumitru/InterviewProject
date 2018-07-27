@@ -9,6 +9,9 @@ namespace Project.App_Start
     using Ninject;
     using Ninject.Web.Common;
     using Ninject.Web.Common.WebHost;
+    using Service.Implementation;
+    using Service.Infrastructure;
+    using Service.Interfaces;
 
     public static class NinjectWebCommon 
     {
@@ -59,7 +62,8 @@ namespace Project.App_Start
         /// <param name="kernel">The kernel.</param>
         private static void RegisterServices(IKernel kernel)
         {
-            kernel.Bind<IRestHttpClient>().To<VacancyRepository>();
+            kernel.Bind<IRestHttpClient>().To<RestHttpClient>();
+            kernel.Bind<IBitcoinService>().To<BitcoinService>();
         }        
     }
 }

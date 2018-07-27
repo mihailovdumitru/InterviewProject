@@ -1,10 +1,11 @@
 ﻿using Model.Elements;
-using Services.Infrastructure;
+using Service.Infrastructure;
+using Service.Interfaces;
 using System.Threading.Tasks;
 
-namespace Services.Implementation
+namespace Service.Implementation
 {
-    public class BitcoinService
+    public class BitcoinService : IBitcoinService
     {
         private readonly IRestHttpClient restHttpClient;
 

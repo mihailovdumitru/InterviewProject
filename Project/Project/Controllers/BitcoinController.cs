@@ -1,20 +1,29 @@
-﻿using System;
+﻿using Model.Elements;
+using Service.Interfaces;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Http;
 
 namespace Project.Controllers
 {
-    public class Bitcoin : ApiController
+    public class BitcoinController : ApiController
     {
+        private readonly IBitcoinService bitcoinService;
+
+        public BitcoinController(IBitcoinService service)
+        {
+            this.bitcoinService = service;
+        }
+
         [AllowAnonymous]
         // GET api/<controller>
-        public IEnumerable<string> Get()
+        public async Task<BitcoinRealTimeData> Get()
         {
-
-            return new string[] { "value1", "value2" };
+            return await bitcoinService.GetBitcoinRealData();
         }
 
         // GET api/<controller>/5

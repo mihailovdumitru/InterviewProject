@@ -1,6 +1,6 @@
 ﻿using System.Threading.Tasks;
 
-namespace Services.Infrastructure
+namespace Service.Infrastructure
 {
     public interface IRestHttpClient
     {
