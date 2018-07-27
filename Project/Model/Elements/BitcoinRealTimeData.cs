@@ -7,14 +7,14 @@ namespace Model.Elements
 {
     public class BitcoinRealTimeData
     {
-        private double High { get; set; }
-        private double Last { get; set; }
-        private double Timestamp { get; set; }
-        private double Bid { get; set; }
-        private double Vwap { get; set; }
-        private double Volume { get; set; }
-        private double Low { get; set; }
-        private double Ask { get; set; }
-        private double Open { get; set; }
+        public double High { get; set; }
+        public double Last { get; set; }
+        public double Timestamp { get; set; }
+        public double Bid { get; set; }
+        public double Vwap { get; set; }
+        public double Volume { get; set; }
+        public double Low { get; set; }
+        public double Ask { get; set; }
+        public double Open { get; set; }
     }
 }
