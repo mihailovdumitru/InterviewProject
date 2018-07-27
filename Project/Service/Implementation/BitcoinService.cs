@@ -16,7 +16,9 @@ namespace Service.Implementation
 
         public async Task<BitcoinRealTimeData> GetBitcoinRealData()
         {
-            return await restHttpClient.Get<BitcoinRealTimeData>("https://www.bitstamp.net/api/", "ticker");
+            var data =  await restHttpClient.Get<BitcoinRealTimeData>("https://www.bitstamp.net/api/", "ticker/");
+
+            return data;
         }
     }
 }
