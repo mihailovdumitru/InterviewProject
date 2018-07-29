@@ -3,7 +3,6 @@
 
     self.myHometown = ko.observable("");
     self.bitcoinRealTimeData = ko.observable("");
-    self.bitcoinData = {};
 
     Sammy(function () {
         this.get('#home', function () {
@@ -31,8 +30,6 @@
                 url: app.dataModel.bitcoinRealDataUrl,
                 contentType: "application/json; charset=utf-8",
                 success: function (data) {
-                    console.log(data);
-                    self.bitcoinData = data;
                     self.bitcoinRealTimeData = $("#tableBitcoinRatio");
                     var tr = $("<tr></tr>");
                     tr.html(
