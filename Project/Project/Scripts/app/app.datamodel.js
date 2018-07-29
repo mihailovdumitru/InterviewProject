@@ -3,6 +3,7 @@
     // Routes
     self.userInfoUrl = "/api/Me";
     self.siteUrl = "/";
+    self.bitcoinRealDataUrl = "api/bitcoin";
 
     // Route operations
 

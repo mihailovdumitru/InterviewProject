@@ -8,8 +8,20 @@ using System.Threading.Tasks;
 
 namespace Service.Infrastructure
 {
+    /// <summary>
+    /// Generic class for handling HTTP calls
+    /// </summary>
+    /// <seealso cref="Service.Infrastructure.IRestHttpClient" />
     public class RestHttpClient : IRestHttpClient
     {
+        /// <summary>
+        /// Gets the specified base URL.
+        /// </summary>
+        /// <typeparam name="T">Data Type returned</typeparam>
+        /// <param name="baseUrl">The base URL.</param>
+        /// <param name="url">The URL.</param>
+        /// <param name="accessToken">The access token.</param>
+        /// <returns>Data returned from API</returns>
         public async Task<T> Get<T>(string baseUrl, string url, string accessToken = null)
         {
             try
@@ -33,8 +45,6 @@ namespace Service.Infrastructure
             }
             catch (Exception ex)
             {
-                //_log.Error("Rest Get error: ", ex);
-
                 return default(T);
             }
         }

@@ -15,6 +15,9 @@ namespace Project.App_Start
     using Service.Infrastructure;
     using Service.Interfaces;
 
+    /// <summary>
+    /// Used for setting up the DependencyInjection
+    /// </summary>
     public static class NinjectWebCommon 
     {
         private static readonly Bootstrapper bootstrapper = new Bootstrapper();

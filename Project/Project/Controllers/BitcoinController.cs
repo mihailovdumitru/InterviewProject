@@ -10,6 +10,10 @@ using System.Web.Http;
 
 namespace Project.Controllers
 {
+    /// <summary>
+    /// Controller for handling HTTP calls for bitcoin data
+    /// </summary>
+    /// <seealso cref="System.Web.Http.ApiController" />
     public class BitcoinController : ApiController
     {
         private readonly IBitcoinService bitcoinService;

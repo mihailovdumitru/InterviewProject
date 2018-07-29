@@ -5,6 +5,10 @@ using System.Web;
 
 namespace Model.Elements
 {
+    /// <summary>
+    /// Model of data recieved from public API with information about bitcoin
+    /// transactions
+    /// </summary>
     public class BitcoinRealTimeData
     {
         public double High { get; set; }
